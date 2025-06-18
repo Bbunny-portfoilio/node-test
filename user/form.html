@@ -1,0 +1,68 @@
+<div class="main-head-wrap">
+    <h2 class="contents-title">Contents Title</h2>
+</div>
+<div class="main-body-wrap">
+    <div class="main-contents">
+        <div class="contents-sec-title">
+            <h3>
+                <img src="../assets/_image/title-mark.svg" alt="제목 마커">
+                게시글 작성
+            </h3>
+        </div>
+        <div class="contents-group">
+            <div class="contents-wrap">
+
+                <div class="contents-head">
+
+                </div>
+
+                <div class="cotents-body">
+                    <div class="contents-wrap">
+                        <form class="board-form-wrap">
+                            <fieldset class="board-form">
+                                <div class="input-wrap">
+                                    <label for="subjectTxt">
+                                        <img src="../assets/_image/title-mark-sub.svg" alt="제목 마커">
+                                        제목
+                                    </label>
+                                    <input type="text" name="subjectTxt" id="subjectTxt">
+                                </div>
+                                <div class="input-wrap">
+                                    <label for="surmaryArea">
+                                        <img src="../assets/_image/title-mark-sub.svg" alt="제목 마커">
+                                        내용
+                                    </label>
+                                    <textarea id="surmaryArea" name="surmaryArea"></textarea>
+                                </div>
+                                <div class="input-wrap file-uploader">
+                                    <label for="surmaryArea">
+                                        <img src="../assets/_image/title-mark-sub.svg" alt="제목 마커">
+                                        첨부파일
+                                    </label>
+                                    <textarea id="surmaryArea" name="surmaryArea"></textarea>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+
+                    <script>
+                        $(document).ready(function () {
+                            $('#surmaryArea').summernote();
+                        });
+                    </script>
+                </div>
+
+                <div class="cotents-foot">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-footer-wrap">
+    <div class="flex-box just-end gap-5">
+        <button class="btn btn-primary">BUTTON</button>
+        <button class="btn btn-gray">BUTTON</button>
+    </div>
+</div>

@@ -1,0 +1,238 @@
+<div class="sidebar-wrap">
+    <div class="main-logo">
+        <h1 class="flex-box item-center">
+            <img src="../assets/_image/CI.svg" alt="">
+            <span class="h1-strong mr-3">CMS</span>
+            <span class="h1-thin"> designer </span>
+        </h1>
+    </div>
+    <button type="button" id="navControlBtn" class="nav-control-btn"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+    <button type="button" id="userBoxBtn" class="user-box-btn btn-circle btn-line"><i class="fa fa-user" aria-hidden="true"></i></button>
+    
+    <button type="button" class="nav-mobile-btn btn-circle btn-line">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <div class="user-infor-wrap user-manger">
+        <div class="user-profile">
+            <div class="user-box">
+                <div class="user-pic-wrap">
+                    <img src="../assets/_image/profile-pic.png" alt="프로필 이미지" class="user-pic">
+                </div>
+                <button type="button" id="useSetBtn" class="btn-circle btn-mild user-set-btn">
+                    <i class="fas fa-cog"></i>
+                </button>
+            </div>
+            <div class="user-infor">
+                <div class="user-name-wrap flex-box gap-5 just-center item-center">
+                    <span class="user-class">관리자</span>
+                    <div class="user-name">USER NAME</div>
+                </div>
+                <div class="user-group-wrap">
+                    <div class="user-group">GROUP NAME</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="nav-wrap">
+        <ul class="nav-inner">
+            <li class="ultimate ultimate-left">
+                <button id="ultimateLeftBtn" class="btn-circle btn-primary btn-ultimate btn-ultimate-left"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button>
+            </li>
+            <li class="ultimate ultimate-right">
+                <button id="ultimateRightBtn" class="btn-circle btn-primary btn-ultimate btn-ultimate-right"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+            </li>
+            <li>
+                <div class="flex-box gap-10">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                    <div class="menu-title">게시판</div>
+                </div>
+                <ul class="submenu-wrap">
+                    <li><a href="#">게시판1</a></li>
+                    <li><a href="#">게시판2</a></li>
+                    <li><a href="#">게시판3</a></li>
+                    <li><a href="#">게시판4</a></li>
+                    <li><a href="#">게시판5</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="flex-box gap-10">
+                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                    <div class="menu-title">콘텐츠</div>
+                </div>
+                <ul class="submenu-wrap">
+                    <li><a href="#">콘텐츠1</a></li>
+                    <li><a href="#">콘텐츠2</a></li>
+                    <li><a href="#">콘텐츠3</a></li>
+                    <li><a href="#">콘텐츠4</a></li>
+                    <li><a href="#">콘텐츠5</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="flex-box gap-10">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    <div class="menu-title">회원관리</div>
+                </div>
+                <ul class="submenu-wrap">
+                    <li><a href="#">사용자목록1</a></li>
+                    <li><a href="#">사용자목록2</a></li>
+                    <li><a href="#">사용자목록3</a></li>
+                    <li><a href="#">사용자목록4</a></li>
+                    <li><a href="#">사용자목록5</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="flex-box gap-10">
+                    <i class="fa fa-wrench" aria-hidden="true"></i>
+                    <div class="menu-title">시스템관리</div>
+                </div>
+                <ul class="submenu-wrap">
+                    <li><a href="#">환경설정1</a></li>
+                    <li><a href="#">환경설정2</a></li>
+                    <li><a href="#">환경설정3</a></li>
+                    <li><a href="#">환경설정4</a></li>
+                    <li><a href="#">환경설정5</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="flex-box gap-10">
+                    <i class="fa fa-picture-o" aria-hidden="true"></i>
+                    <div class="menu-title">템플릿</div>
+                </div>
+                <ul class="submenu-wrap">
+                    <li><a href="/user/layout.html?&pageId=templete">템플릿</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+<script>
+    
+    $(document).ready(function () {
+
+        var body = $('body');
+        var navTitle = $('.nav-inner > li > div');
+        var navBox = $('.nav-inner > li');
+        var subMenu = $('.submenu-wrap');
+
+        
+        // 메뉴 레이아웃 ------------------------------------------------------------------
+
+        subMenu.slideUp(0);
+
+        navBox.hover(function(){
+            if(body.hasClass('top-wrap') || body.hasClass('reduction')){
+
+                navBox.removeClass('active');
+                subMenu.removeClass('active');
+
+                $(this).addClass('active');
+                $(this).find(subMenu).addClass('active');
+
+                $(this).find(subMenu).stop().fadeToggle(300);
+
+
+            }else {
+            }
+        });
+
+        navTitle.click(function(){
+            if(body.hasClass('top-wrap') || body.hasClass('reduction')){
+                
+
+            }else {
+
+                if($(this).parents('li').hasClass('active')){
+                    
+                    subMenu.stop().slideUp(300);
+                    navBox.removeClass('active');
+
+                }else {
+                    subMenu.stop().slideUp(300);
+
+                    navBox.removeClass('active');
+                    subMenu.removeClass('active');
+
+                    $(this).parent('li').addClass('active');
+                    $(this).next(subMenu).addClass('active');
+
+                    $(this).next(subMenu).stop().slideDown(300);
+                }
+            }
+        });
+
+        // 메뉴 컨트롤러(임시) ----------------------------------------------------------------
+        
+        if(body.hasClass('top-wrap')){
+            $('.user-profile').hide(0);
+        }else{
+            $('.user-profile').show(0);
+        }
+
+        $('#userBoxBtn').click(function(){
+            $('.top-wrap .user-profile').fadeToggle(300);
+        });
+
+        $('#navControlBtn').click(function(){
+            subMenu.hide(0);
+            body.toggleClass('reduction');
+        });
+
+        $('.main-logo h1').click(function(){
+            
+            subMenu.hide(0);
+            var menuIn = $('.top-wrap .nav-wrap .nav-inner');
+            menuIn.removeClass('nav-padidng-0');
+
+            body.removeClass('reduction');
+            body.toggleClass('top-wrap');
+
+            if (body.hasClass('top-wrap')) {
+                $('.user-profile').hide(0);
+            } else {
+                $('.user-profile').show(0);
+            }
+
+            ultimateMenu();
+
+        });
+
+        ultimateMenu();
+
+        // 얼티밋 메뉴 ------------------------------------------------------------------
+
+        function ultimateMenu(){
+                    
+        var menuWrap = $('.top-wrap .nav-wrap');
+        var menuIn = $('.top-wrap .nav-wrap .nav-inner');
+        var menuWrapWidth = menuWrap.width();
+        var menuInWidth = menuIn.width();
+        var menuGap = menuInWidth - menuWrapWidth ;
+        
+            if(menuGap < 60 ) {
+                $('#ultimateRightBtn').hide();
+                $('#ultimateLeftBtn').hide();
+                menuIn.addClass('nav-padidng-0');
+            }else {
+
+            }
+
+            $('#ultimateRightBtn').hide();
+
+            $('#ultimateLeftBtn').click(function(){
+                menuIn.css('margin-left',-menuGap+90);
+                $('#ultimateLeftBtn').hide();
+                $('#ultimateRightBtn').show();
+            });
+
+            $('#ultimateRightBtn').click(function(){
+                menuIn.css('margin-left', 0);
+                $('#ultimateLeftBtn').show();
+                $('#ultimateRightBtn').hide();
+            });
+        }
+
+    });
+</script>

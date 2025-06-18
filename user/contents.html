@@ -1,0 +1,394 @@
+<div class="main-head-wrap">
+    <h2 class="contents-title">Contents Title</h2>
+</div>
+<div class="main-body-wrap">
+    <div class="main-contents">
+        <div class="contents-sec-title">
+            <h3>
+                <img src="../assets/_image/title-mark.svg" alt="제목 마커">
+                게시판
+            </h3>
+        </div>
+        <div class="contents-wrap">
+            <div open class="panel-box">
+                <div class="panel-head">
+                    <h4>검색필터</h4>
+                </div>
+                <div class="panel-body">
+                    <div class="panel-form-wrap">
+                        <form class="panel-form ">
+                            <fieldset class="panel-input flex-box just-between">
+                                <div class="form-group flex-box wrap">
+                                    <div class="input-wrap">
+                                        <label for="textInput">항목명</label>
+                                        <input type="text" id="textInput" name="textInput" class="input-panel"
+                                            placeholder="검색어를 입력해주세요.">
+                                    </div>
+                                    <div class="input-wrap">
+                                        <label for="selectInput">선택항목</label>
+                                        <select name="selectInput" id="selectInput">
+                                            <option value="all">[전체]</option>
+                                            <option value="1">선택항목 1</option>
+                                            <option value="2">선택항목 2</option>
+                                        </select>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <label>선택항목</label>
+                                        <div class="input-radio-btn-wrap">
+                                            <div class="input-radio-btn">
+                                                <input type="radio" id="radio001" name="radioBtn">
+                                                <label for="radio001">항목1</label>
+                                                <input type="radio" id="radio002" name="radioBtn">
+                                                <label for="radio002">항목2</label>
+                                                <input type="radio" id="radio003" name="radioBtn">
+                                                <label for="radio003">항목3</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <label>기간항목</label>
+                                        <div class="input-daterange input-modul">
+                                            <input type="date" name="startDate" id="startDate" placeholder="시작일">
+                                            <span class="input-item">~</span>
+                                            <input type="date" name="endDate" id="endDate" placeholder="종료일">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group flex-box gap-5 item-end">
+                                    <button type="button" class="btn btn-icon btn-mild" id="panelBtn">
+                                        <i class="fa fa-panel" aria-hidden="true"></i> 검색
+                                    </button>
+                                    <button type="button" class="btn btn-icon btn-gray" id="refreshBtn">
+                                        <i class="fa fa-repeat" aria-hidden="true"></i> 초기화
+                                    </button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contents-group">
+            <div class="contents-wrap">
+                <div class="cotents-body">
+                    <div class="list-wrap th-sticky">
+                        <div class="list-head-wrap">
+                            <ul class="list-head list-table min-1000">
+                                <li>
+                                    <div class="col col-th col-num">
+                                        <div class="flex-box gap-5 item-center just-center wrap">
+                                            <span class="th-txt">NO</span>
+                                            <button type="button" class="btn-circle btn-light">
+                                                <img src="../assets/_image/array-icon.svg" alt="정렬 버튼">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col col-th col-count">
+                                        <div class="flex-box gap-5 item-center just-center wrap">
+                                            <span class="th-txt">조회수</span>
+                                            <button type="button" class="btn-circle btn-light">
+                                                <img src="../assets/_image/array-icon.svg" alt="정렬 버튼">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col col-th col-subject">
+                                        <div class="flex-box gap-5 item-center just-center wrap">
+                                            <span class="th-txt">제목</span>
+                                            <button type="button" class="btn-circle btn-light">
+                                                <img src="../assets/_image/array-icon.svg" alt="정렬 버튼">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col col-th col-writer">
+                                        <div class="flex-box gap-5 item-center just-center wrap">
+                                            <span class="th-txt">작성자</span>
+                                            <button type="button" class="btn-circle btn-light">
+                                                <img src="../assets/_image/array-icon.svg" alt="정렬 버튼">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col col-th col-date">
+                                        <div class="flex-box gap-5 item-center just-center wrap">
+                                            <span class="th-txt">작성일</span>
+                                            <button type="button" class="btn-circle btn-light">
+                                                <img src="../assets/_image/array-icon.svg" alt="정렬 버튼">
+                                            </button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="list-body-wrap">
+                            <ul class="list-body list-table min-1000">
+                                <li class="new">
+                                    <div class="col col-td col-num">
+                                        <span class="num">31</span>
+                                    </div>
+                                    <div class="col col-td col-count">
+                                        <span class="count td-txt">0</span>
+                                    </div>
+                                    <div class="col col-td col-subject">
+                                        <div class="flex-box item-center gap-5">
+                                            <a href="#" class="subject td-txt">게시글 예시입니다.</a>
+                                            <span class="file-check"><i class="fa fa-paperclip"
+                                                    aria-hidden="true"></i></span>
+                                            <span class="reply-count">2</span>
+                                        </div>
+                                    </div>
+                                    <div class="col col-td col-writer">
+                                        <a class="writer">홍길동</a>
+                                    </div>
+                                    <div class="col col-td col-date">
+                                        <span class="date td-txt">2023-06-07</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col col-td col-num">
+                                        <span class="num">30</span>
+                                    </div>
+                                    <div class="col col-td col-count">
+                                        <span class="count td-txt">0</span>
+                                    </div>
+                                    <div class="col col-td col-subject">
+                                        <div class="flex-box item-center gap-5">
+                                            <img src="../assets/_image/list-reply.svg" alt="답글">
+                                            <a href="#" class="subject td-txt">게시글 예시입니다.</a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-td col-writer">
+                                        <a class="writer">홍길동</a>
+                                    </div>
+                                    <div class="col col-td col-date">
+                                        <span class="date td-txt">2023-06-07</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col col-td col-num">
+                                        <span class="num">29</span>
+                                    </div>
+                                    <div class="col col-td col-count">
+                                        <span class="count td-txt">0</span>
+                                    </div>
+                                    <div class="col col-td col-subject">
+                                        <div class="flex-box item-center gap-5">
+                                            <a href="#" class="subject td-txt">게시글 예시입니다.</a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-td col-writer">
+                                        <a class="writer">홍길동</a>
+                                    </div>
+                                    <div class="col col-td col-date">
+                                        <span class="date td-txt">2023-06-07</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col col-td col-num">
+                                        <span class="num">28</span>
+                                    </div>
+                                    <div class="col col-td col-count">
+                                        <span class="count td-txt">0</span>
+                                    </div>
+                                    <div class="col col-td col-subject">
+                                        <div class="flex-box item-center gap-5">
+                                            <a href="#" class="subject td-txt">게시글 예시입니다.</a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-td col-writer">
+                                        <a class="writer">홍길동</a>
+                                    </div>
+                                    <div class="col col-td col-date">
+                                        <span class="date td-txt">2023-06-07</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col col-td col-num">
+                                        <span class="num">27</span>
+                                    </div>
+                                    <div class="col col-td col-count">
+                                        <span class="count td-txt">0</span>
+                                    </div>
+                                    <div class="col col-td col-subject">
+                                        <div class="flex-box item-center gap-5">
+                                            <a href="#" class="subject td-txt">게시글 예시입니다.</a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-td col-writer">
+                                        <a class="writer">홍길동</a>
+                                    </div>
+                                    <div class="col col-td col-date">
+                                        <span class="date td-txt">2023-06-07</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col col-td col-num">
+                                        <span class="num">26</span>
+                                    </div>
+                                    <div class="col col-td col-count">
+                                        <span class="count td-txt">0</span>
+                                    </div>
+                                    <div class="col col-td col-subject">
+                                        <div class="flex-box item-center gap-5">
+                                            <a href="#" class="subject td-txt">게시글 예시입니다.</a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-td col-writer">
+                                        <a class="writer">홍길동</a>
+                                    </div>
+                                    <div class="col col-td col-date">
+                                        <span class="date td-txt">2023-06-07</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col col-td col-num">
+                                        <span class="num">25</span>
+                                    </div>
+                                    <div class="col col-td col-count">
+                                        <span class="count td-txt">0</span>
+                                    </div>
+                                    <div class="col col-td col-subject">
+                                        <div class="flex-box item-center gap-5">
+                                            <a href="#" class="subject td-txt">게시글 예시입니다.</a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-td col-writer">
+                                        <a class="writer">홍길동</a>
+                                    </div>
+                                    <div class="col col-td col-date">
+                                        <span class="date td-txt">2023-06-07</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col col-td col-num">
+                                        <span class="num">24</span>
+                                    </div>
+                                    <div class="col col-td col-count">
+                                        <span class="count td-txt">0</span>
+                                    </div>
+                                    <div class="col col-td col-subject">
+                                        <div class="flex-box item-center gap-5">
+                                            <a href="#" class="subject td-txt">게시글 예시입니다.</a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-td col-writer">
+                                        <a class="writer">홍길동</a>
+                                    </div>
+                                    <div class="col col-td col-date">
+                                        <span class="date td-txt">2023-06-07</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col col-td col-num">
+                                        <span class="num">23</span>
+                                    </div>
+                                    <div class="col col-td col-count">
+                                        <span class="count td-txt">0</span>
+                                    </div>
+                                    <div class="col col-td col-subject">
+                                        <div class="flex-box item-center gap-5">
+                                            <a href="#" class="subject td-txt">게시글 예시입니다.</a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-td col-writer">
+                                        <a class="writer">홍길동</a>
+                                    </div>
+                                    <div class="col col-td col-date">
+                                        <span class="date td-txt">2023-06-07</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col col-td col-num">
+                                        <span class="num">22</span>
+                                    </div>
+                                    <div class="col col-td col-count">
+                                        <span class="count td-txt">0</span>
+                                    </div>
+                                    <div class="col col-td col-subject">
+                                        <div class="flex-box item-center gap-5">
+                                            <a href="#" class="subject td-txt">게시글 예시입니다.</a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-td col-writer">
+                                        <a class="writer">홍길동</a>
+                                    </div>
+                                    <div class="col col-td col-date">
+                                        <span class="date td-txt">2023-06-07</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col col-td col-num">
+                                        <span class="num">21</span>
+                                    </div>
+                                    <div class="col col-td col-count">
+                                        <span class="count td-txt">0</span>
+                                    </div>
+                                    <div class="col col-td col-subject">
+                                        <div class="flex-box item-center gap-5">
+                                            <a href="#" class="subject td-txt">게시글 예시입니다.</a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-td col-writer">
+                                        <a class="writer">홍길동</a>
+                                    </div>
+                                    <div class="col col-td col-date">
+                                        <span class="date td-txt">2023-06-07</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="col col-td col-num">
+                                        <span class="num">20</span>
+                                    </div>
+                                    <div class="col col-td col-count">
+                                        <span class="count td-txt">0</span>
+                                    </div>
+                                    <div class="col col-td col-subject">
+                                        <div class="flex-box item-center gap-5">
+                                            <a href="#" class="subject td-txt">게시글 예시입니다.</a>
+                                        </div>
+                                    </div>
+                                    <div class="col col-td col-writer">
+                                        <a class="writer">홍길동</a>
+                                    </div>
+                                    <div class="col col-td col-date">
+                                        <span class="date td-txt">2023-06-07</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="paginate-wrap">
+                        <ul class="paginate">
+                            <li class="most-prev paginate-control disabled"><a href="#"><i
+                                        class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+                            <li class="prev paginate-control disabled"><a href="#"><i class="fa fa-angle-left"
+                                        aria-hidden="true"></i></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li class="most-next paginate-control"><a href="#"><i class="fa fa-angle-right"
+                                        aria-hidden="true"></i></a></li>
+                            <li class="next paginate-control"><a href="#"><i class="fa fa-angle-double-right"
+                                        aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cotents-foot">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-footer-wrap">
+    <div class="flex-box just-end gap-5">
+        <button class="btn btn-primary">BUTTON</button>
+        <button class="btn btn-gray">BUTTON</button>
+    </div>
+</div>
